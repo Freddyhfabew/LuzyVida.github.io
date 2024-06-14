@@ -67,4 +67,18 @@ a:hover {
         margin: 0;
     }
 
+    nav li {
+        font-size: 15px;
+        display: inline;
+        padding: 2px 10px 2px 10px;
+        border: none;
+    }
+
+    nav {
+        margin-top: -16px;
+        height: 32px;
+        background-color: #969696;
+        text-align: right;
+    }
+
 }
