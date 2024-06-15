@@ -1,0 +1,29 @@
+aside {
+    width: 280px;
+    background-color: aliceblue;
+    padding: 5px;
+    margin-top: 0;
+}
+
+
+@media (max-width: 600px) {
+
+    aside {
+        width: 100px;
+        padding: 0;
+    }
+    h3 {
+        font-size: medium;
+        margin-bottom: 0;
+
+    }
+    p {
+        font-size: small;
+        padding: 0;
+        margin: 0;
+    }
+    a {
+        font-size: small;
+        text-wrap: auto;
+    }
+}
