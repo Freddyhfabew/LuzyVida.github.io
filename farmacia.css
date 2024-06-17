@@ -1,0 +1,18 @@
+.consultorios button {
+    display: block;
+    margin: 5px;
+    color: black;
+    border: none;
+    border-radius: 5px;
+}
+.consultorios {
+    width: 150px;
+    margin: 0;
+}
+.consultorios h3 {
+    margin: 0px;
+}
+iframe {
+    background-color: rgba(0, 30, 255, 0.23);
+}
+
