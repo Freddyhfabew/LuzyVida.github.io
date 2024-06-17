@@ -38,15 +38,19 @@
 </nav>
 <div class="consultorios">
     <h3>Junio</h3>
-    <iframe id="myIframe" style="display:none" width="500" height="500"></iframe>
+    <div id="datos">
+        <iframe id="myIframe" style="display:none" width="500" height="500"></iframe>
 
+    </div>
     <!-- You can replace these URLs with your own URLs -->
     <button onclick="loadLink('medicinafamiliar.html')">Medicina Familiar</button>
     <button onclick="loadLink('ecografia.html')">Ecografía</button>
     <!-- Add more buttons as needed -->
 
-    <button id="closeButton" style="display:none" onclick="closeIframe()">Close</button>
+    <!--<button id="closeButton" style="display:none" onclick="closeIframe()">Cerrar</button>-->
+
 </div>
+
 <script>
     function loadLink(url) {
         var iframe = document.getElementById('myIframe');
@@ -61,6 +65,12 @@
         var closeButton = document.getElementById('closeButton');
         iframe.style.display = "none"; // Hide the iframe
         closeButton.style.display = "none"; // Hide the close button
+    }
+
+    window.addEventListener('message', receiveMessage, false);
+
+    function receiveMessage(evt) {
+        if (evt.data === 'close') document.getElementById('myIframe').style.display = 'none';
     }
 </script>
 </body>
