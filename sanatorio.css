@@ -17,17 +17,48 @@ body {
 .main aside p {
     margin: 0;
 }
-#table {
-    width: 285px;
-    padding: 0;
+.consultorios button {
     display: inline;
+    margin: 5px;
+    color: black;
+    border: none;
+    border-radius: 5px;
 }
-#table table {
-    border-collapse: collapse;
+.consultorios button:hover {
+    background-color: gray;
 }
-#table thead th{
-    padding: 2px 20px 2px 20px;
-    border: 1px solid black;
+.consultorios {
+    width: 150px;
+    margin: 0;
+}
+.consultorios h3 {
+    margin: 0px;
+}
+#myIframe {
+    background-color: rgba(0, 30, 255, 0.23);
+    border: none;
+    position: fixed;
+    top: 262px;
+    left: 425px;
+    width: 500px;
+    height: 300px;
+
+}
+#datos {
+
+}
+.floatingIframe {
+   position: fixed;
+   top: 0;
+   right: 0;
+   width: 200px;
+   height: 100px;
+   border: none;
+   z-index: 1000;
+}
+
+.content {
+   margin-right: 220px; // So that content doesn't go behind the iframe
 }
 
 @media (max-width: 600px) {
@@ -35,21 +66,23 @@ body {
         width: 100%;
         flex-direction: column;
     }
+
     .main aside {
         width: 100px;
         padding: 0 0 0 10px;
     }
+
     .main aside h3 {
         font-size: medium;
     }
+
     .main aside p {
         font-size: small;
     }
+
     .main aside a {
         font-size: small;
         text-wrap: auto;
     }
-    #table{
-        display: none;
-    }
+
 }

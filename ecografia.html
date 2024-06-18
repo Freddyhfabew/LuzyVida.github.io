@@ -3,16 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <title>None</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <style>
         tr {
             border: 1px solid gray;
         }
+
         td {
             padding: 15px;
         }
+
+        .material-icons:hover {
+            background-color: #888888;
+        }
     </style>
 </head>
-<body>
+<body onclick="closeIframe()">
+<i class="material-icons" style="font-size:36px; position: relative; top:4px; left:380px">close</i>
 <table>
     <tr>
         <th>Día</th>
@@ -23,7 +30,8 @@
         <td>17</td>
         <td>Dr. Hector Lopez</td>
         <td>7:00 - 12:00 <br>
-            14:00 - 17:00</td>
+            14:00 - 17:00
+        </td>
     </tr>
     <tr>
         <td>20</td>
@@ -51,5 +59,10 @@
         <td>7:00 - 13:00</td>
     </tr>
 </table>
+<script>
+    function closeIframe() {
+        window.parent.postMessage('close', '*')
+    }
+</script>
 </body>
 </html>

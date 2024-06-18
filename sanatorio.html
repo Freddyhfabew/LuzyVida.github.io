@@ -58,13 +58,63 @@
         <p>E-mail</p>
         <a href="mailto:hospital@luzyvida.org.py">hospital@luzyvida<br>.org.py</a>
     </aside>
-    <div id="table">
+    <div class="consultorios" style="background-color: #555555">
+        <h3>Junio</h3>
+        <div id="datos">
+            <iframe id="myIframe" style="display:none" width="500" height="500"></iframe>
+
+        </div>
+        <!-- You can replace these URLs with your own URLs -->
+        <button onclick="loadLink('medicinafamiliar.html')">Medicina Familiar</button>
+        <button onclick="loadLink('ecografia.html')">Ecografía</button>
+        <button onclick="loadLink('medicinaInterna.html')">Medicina Interna</button>
+        <button onclick="loadLink('traumatologia.html')">Traumatología</button>
+        <button onclick="loadLink('pediatria.html')">Pediatría</button>
+        <button onclick="loadLink('ginecoObstetricia.html')">Gineco Obstetricia</button>
+        <button onclick="loadLink('medicinaGeneral.html')">Medicina General</button>
+        <button onclick="loadLink('psicologia.html')">Psicología</button>
+        <button onclick="loadLink('kinesiologiaFisiatra.html')">Kinesiología y Fisiatra</button>
+        <button onclick="loadLink('odontologia.html')">Odontología</button>
+        <button onclick="loadLink('cirugiaGeneral.html')">Cirugía General</button>
+        <button onclick="loadLink('urologia.html')">Urología</button>
+        <button onclick="loadLink('cardiologia.html')">Cardología</button>
+        <button onclick="loadLink('otorrinolaringologia.html')">Otorrinolaringología</button>
+        <button onclick="loadLink('reumatologia.html')">Reumatología</button>
+        <button onclick="loadLink('oftamologia.html')">Oftamología</button>
+        <button onclick="loadLink('alergista.html')">Alergista</button>
+        <button onclick="loadLink('psiquiatraConsejeros.html')">Psiquiatra/Consejeros</button>
+        <button onclick="loadLink('cirugiaPlastica.html')">Cirugía Plastica</button>
+        <!-- Add more buttons as needed -->
+
+        <!--<button id="closeButton" style="display:none" onclick="closeIframe()">Cerrar</button>-->
 
     </div>
     <div id="content">
 
     </div>
 </div>
+<script>
+    function loadLink(url) {
+        var iframe = document.getElementById('myIframe');
+        var closeButton = document.getElementById('closeButton');
+        iframe.src = url; // Load the URL into the iframe
+        iframe.style.display = "block"; // Show the iframe
+        closeButton.style.display = "block"; // Show the close button
+    }
+
+    function closeIframe() {
+        var iframe = document.getElementById('myIframe');
+        var closeButton = document.getElementById('closeButton');
+        iframe.style.display = "none"; // Hide the iframe
+        closeButton.style.display = "none"; // Hide the close button
+    }
+
+    window.addEventListener('message', receiveMessage, false);
+
+    function receiveMessage(evt) {
+        if (evt.data === 'close') document.getElementById('myIframe').style.display = 'none';
+    }
+</script>
 
 <script src="js/app.js"></script>
 

@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Luz y Vida</title>
+    <title>Farmacia</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="farmacia.css">
     <meta name="description" content="">
@@ -36,43 +36,9 @@
         <li><a href="contactos.html">Contactos</a></li>
     </ul>
 </nav>
-<div class="consultorios">
-    <h3>Junio</h3>
-    <div id="datos">
-        <iframe id="myIframe" style="display:none" width="500" height="500"></iframe>
 
-    </div>
-    <!-- You can replace these URLs with your own URLs -->
-    <button onclick="loadLink('medicinafamiliar.html')">Medicina Familiar</button>
-    <button onclick="loadLink('ecografia.html')">Ecografía</button>
-    <!-- Add more buttons as needed -->
 
-    <!--<button id="closeButton" style="display:none" onclick="closeIframe()">Cerrar</button>-->
 
-</div>
-
-<script>
-    function loadLink(url) {
-        var iframe = document.getElementById('myIframe');
-        var closeButton = document.getElementById('closeButton');
-        iframe.src = url; // Load the URL into the iframe
-        iframe.style.display = "block"; // Show the iframe
-        closeButton.style.display = "block"; // Show the close button
-    }
-
-    function closeIframe() {
-        var iframe = document.getElementById('myIframe');
-        var closeButton = document.getElementById('closeButton');
-        iframe.style.display = "none"; // Hide the iframe
-        closeButton.style.display = "none"; // Hide the close button
-    }
-
-    window.addEventListener('message', receiveMessage, false);
-
-    function receiveMessage(evt) {
-        if (evt.data === 'close') document.getElementById('myIframe').style.display = 'none';
-    }
-</script>
 </body>
 
 </html>
