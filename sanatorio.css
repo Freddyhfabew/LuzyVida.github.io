@@ -43,7 +43,7 @@ body {
 }
 
 #myIframe {
-    background-color: rgba(52,66,92, 1);
+    background-color: white;
     border: none;
     position: fixed;
     top: 262px;
@@ -94,6 +94,5 @@ body {
         width: 100%;
         height: 100%;
     }
-
 
 }
