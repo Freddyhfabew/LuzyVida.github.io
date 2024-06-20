@@ -6,16 +6,29 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <style>
         tr {
-            border: 1px solid gray;
+            border-collapse: collapse;
+            margin: 0;
+            padding: 0;
         }
 
         td {
+            font-size: small;
             padding: 15px;
+            border-collapse: collapse;
+            border: 1px solid gray;
         }
 
         .material-icons:hover {
             background-color: #888888;
         }
+
+        @media (max-width: 500px) {
+            td {
+                font-size: xx-small;
+                padding: 5px;
+            }
+        }
+
     </style>
 </head>
 <body onclick="closeIframe()">
